@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Ürün Sipariş Formu</title>
+</head>
+
+<body onload="urunAdediDoldur(); taksitlendir();">
+    <h2>Ürün Sipariş Formu</h2>
+    <form action="" id="urunSiparisFormu">
+        <label for="cinsiyet">Cinsiyet</label>
+        <span>
+            <input type="radio" name="cinsiyet" id="erkekUrunleri" value="E" onchange="urunleriGetir()">
+            <label for="erkekUrunleri">Erkek Ürünleri</label>
+            <input type="radio" name="cinsiyet" id="kadinUrunleri" value="K" onchange="urunleriGetir()">
+            <label for="kadinUrunleri">Kadın Ürünleri</label>
+        </span>
+        <!-- <input type="button" value="Ürün Listesini Getir" id="btnGetir" onclick="listeDoldur()"> -->
+        <label for="urunListesi">Ürün Seçimini Yapınız!</label>
+        <select name="" id="urunListesi" size="">
+           
+            <!-- BOŞ LiSTE -->
+        </select>
+
+        <label for="urunAdedi">Ürün Adetini Seçiniz</label>
+        <select name="" id="urunAdedi">
+            <!-- BOŞ LİSTE -->
+        </select>
+
+        <label for="taksitSayisi">Taksit Sayısını Seçiniz</label>
+        <select name="" id="taksitSayisi">
+            <!-- BOŞ LİSTE -->
+        </select>
+
+
+            <input type="button" value="Ara Toplam Hesapla" id="btnHesapla" onclick="hesapla()">
+           
+            <label for="birimFiyati">Ürün Birim Fiyatı</label>
+            <input type="text" id="birimFiyati" disabled>
+
+           
+            <label for="araToplamTutari">Ara Toplam Tutarı</label>
+            <input type="text" id="araToplamTutari" disabled>
+
+            <label for="kargoUcreti">Kargo Ücreti</label>
+            <input type="text" id="kargoUcreti" disabled>
+
+    </form>
+    <h5 id="sonuc"></h5>
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
